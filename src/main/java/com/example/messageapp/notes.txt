@@ -1,0 +1,18 @@
+HttpStatus Codes
+404 - Not found
+401 - unauthorised
+403 - forbiddden
+200 - ok
+405 - method not allowed
+
+
+Logging:
+log.info();
+log.error();
+log.debug();
+log.fatal();
+
+@Service
+
+
+# MySqlWorkBench(MySQL_)/ pgAdmin (postgres) / datagrip (All)
