@@ -7,7 +7,7 @@ Spring data rest sits on the repositories and exposes the Rest End Points
 for the methods exposed in the interface.
 
 Rest Levels (Leonard Richardson Pyramid)
-![Rest Levels](Rest_Levels.png)
+![Rest Levels](assets/Rest_Levels.png)
 
 * Level 0 : RPC Services without any resources /basic url end points returning Html / XML /Json. No Consideration of resources 
 * Level 1: More structure on ur API end Points / URLs. Exposing end Points around Resources (Person / User) 
@@ -20,7 +20,7 @@ Support:
 the `spring data commons repository` Interface hierarchy**
 
 Supported Eco Systems
-![Spring data rest support](Spring_data_rest_ecosystem.png)
+![Spring data rest support](assets/Spring_data_rest_ecosystem.png)
 
 Data Jpa \
 Mongo Db \
@@ -30,7 +30,7 @@ Cassandra \
 Solr
 
 ### How Rest End Points are exposed
-![Spring Rest Controller Architecture](Spring_data_repository.png)
+![Spring Rest Controller Architecture](assets/Spring_data_repository.png)
 
 Spring Data Rest sits on top of repository and exposes rest end point with appropriate Http Verbs
 for each method, which can be customised from exporting, the relation (rel) for links, the end point of the method and other things.
@@ -56,7 +56,7 @@ public class MyRepo extends JpaRepository<MyEntity, Integer> {}
 this makes the resource not being exported and also makes all the links related to associations as read only (only Get relartions are exported).
 
 ### Working with entities
-![Working with Entities](Working_with_entities_PUT.png)
+![Working with Entities](assets/Working_with_entities_PUT.png)
 S is primary key of ticket
 
 Using Links, we can update the attributes with associations.
@@ -64,7 +64,7 @@ Using Links, we can update the attributes with associations.
 ### Customising payloads
 with projections 
 
-![Sample Projection](Projections.png)
+![Sample Projection](assets/Projections.png)
 
 they have to be placed in the same package as entities to get automatically picked up (or) can be written other place and manually registered.
 
@@ -109,7 +109,7 @@ public class MyRepo{
 
 PROS AND CONS
 
-![Pros and Cons](Projection_Pros_and_Cons.png)
+![Pros and Cons](assets/Projection_Pros_and_Cons.png)
 
 CONS
 * Only works with GET, not on PUT / POST 
@@ -121,7 +121,7 @@ PROS:
 * easily customisable by adding an interface and just adding getters
 
 ### HYPERMEDIA
-![Hypermedia](Hypermedia.png)
+![Hypermedia](assets/Hypermedia.png)
 
 
 #### HYPERMEDIA COMPONENTS
