@@ -1,12 +1,13 @@
 package com.example.messageapp;
 
-import com.example.messageapp.controller.UserController;
-import com.example.messageapp.service.UserService;
-import com.example.messageapp.service.impl.UserServiceImpl;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
+@EnableJpaRepositories
+@EnableAutoConfiguration
 public class MessageAppApplication {
 
 	/*public void test(){

@@ -2,15 +2,24 @@ package com.example.messageapp.controller;
 
 import com.example.messageapp.dto.ApiResponse;
 import com.example.messageapp.dto.UserDto;
+import com.example.messageapp.entity.User;
+import com.example.messageapp.repo.UserRepo;
 import com.example.messageapp.service.UserService;
+import com.querydsl.core.types.Predicate;
+import antlr.ASTNULLType;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.querydsl.binding.QuerydslPredicate;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/users")
 @Slf4j
+@RequiredArgsConstructor(onConstructor_ = {@Autowired})
 public class UserController {
+
+    private final UserRepo userRepo;
 
 
     /* Constructor way */
@@ -50,4 +59,8 @@ public class UserController {
         return new ApiResponse<>(userDto, "User signed up successfully!");
     }
 
+    @GetMapping("/filteredusers")
+    public Iterable<User> getUsersByQuerydslPredicate(@QuerydslPredicate (root = User.class) Predicate predicate) {
+        return userRepo.findAll(predicate);
+    }
 }
