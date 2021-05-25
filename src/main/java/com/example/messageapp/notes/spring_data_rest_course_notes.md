@@ -178,3 +178,7 @@ ControllerAdvice is used to handle the exceptions
 @ResponseStatus - to give the status code for response.
 
 using RepositoryEventHandlers
+
+
+### Links
+[Post Body with Association](https://stackoverflow.com/questions/25311978/posting-a-onetomany-sub-resource-association-in-spring-data-rest)

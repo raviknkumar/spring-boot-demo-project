@@ -22,7 +22,7 @@ public class TicketType {
     private Boolean includesWorkshop;
 
     @OneToMany(mappedBy = "ticketType")
-    @JsonIgnore
+    //@JsonIgnore
     private List<TicketPrice> ticketPrices;
 
     public TicketType() {

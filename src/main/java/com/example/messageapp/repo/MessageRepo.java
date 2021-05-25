@@ -10,6 +10,6 @@ import com.example.messageapp.entity.Message;
  * path: is path used as base path for every url inside message resource
  * like: {url}/{path}{?page,size,sort}"
  */
-@RepositoryRestResource (collectionResourceRel = "resource_message", path = "message")
+@RepositoryRestResource (collectionResourceRel = "message", path = "message")
 public interface MessageRepo extends JpaRepository<Message, Integer> {
 }

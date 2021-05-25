@@ -10,6 +10,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 @Data
 @Builder
@@ -24,5 +26,9 @@ public class Message {
 
     private String message;
     private Date postedOn;
-    private Integer userId;
+
+    @ManyToOne
+    @JoinColumn (name = "user_id")
+    //@JoinColumn (name = "user_id", nullable = false, updatable = false)
+    private User user;
 }
